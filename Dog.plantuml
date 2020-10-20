@@ -1,0 +1,55 @@
+@startuml
+
+    interface BarkBehaviour {
+    }
+
+    class Bork {
+    }
+
+    class Corgi {
+    }
+
+    abstract class Dog {
+    }
+
+    class HerdCattle {
+    }
+
+    class Hunt {
+    }
+
+    interface InstinctBehaviour {
+    }
+
+    class Lab {
+    }
+
+    class LoudBark {
+    }
+
+    class Main {
+    }
+
+    class NoBark {
+    }
+
+    class Wag {
+    }
+
+    class Wolf {
+    }
+
+
+  Bork .up.|> BarkBehaviour
+  Corgi -up-|> Dog
+  Dog o-- BarkBehaviour : barkBehaviour
+  Dog o-- InstinctBehaviour : instinctBehaviour
+  HerdCattle .up.|> InstinctBehaviour
+  Hunt .up.|> InstinctBehaviour
+  Lab -up-|> Dog
+  LoudBark .up.|> BarkBehaviour
+  NoBark .up.|> BarkBehaviour
+  Wag .up.|> InstinctBehaviour
+  Wolf -up-|> Dog
+
+@enduml
